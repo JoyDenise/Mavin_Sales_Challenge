@@ -462,5 +462,3 @@ def qoq_revenue_update(manager):
     return fig
 
 
-if __name__ == "__main__":
-    app.run_server(port=5000)
