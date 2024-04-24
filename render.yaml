@@ -1,13 +1,14 @@
+# Exported from Render on 2024-04-23T15:24:01Z
 services:
-  # See https://render.com/docs/blueprint-spec for more info on render blueprints
-  - type: web
-    name: anatomy-shoe-horn-skean-t85g
-    env: python
-    plan: free
-    # A requirements.txt file must exist
-    buildCommand: pip install -r requirements.txt
-    # A src/app.py file must exist and contain `server=app.server`
-    startCommand: gunicorn --chdir src app:server
-    envVars:
-      - key: PYTHON_VERSION
-        value: 3.10.0
+- type: web
+  name: explorer-garlic-trove-q6wn
+  runtime: python
+  repo: https://github.com/JoyDenise/Mavin_Sales_Challenge
+  plan: free
+  envVars:
+  - key: PYTHON_VERSION
+    sync: false
+  region: oregon
+  buildCommand: pip install -r requirements.txt
+  startCommand: gunicorn --chdir src app:server
+version: "1"
