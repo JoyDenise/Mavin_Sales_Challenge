@@ -460,5 +460,3 @@ def qoq_revenue_update(manager):
     ).update_layout(showlegend=False)
 
     return fig
-
-
