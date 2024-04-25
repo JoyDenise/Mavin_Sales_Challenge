@@ -17,6 +17,8 @@ products = pd.read_csv("Data/products.csv")
 
 app = Dash(__name__, external_stylesheets=[dbc.themes.SLATE, dbc_css])
 
+server = app.server
+
 load_figure_template("SOLAR")
 
 app.layout = dbc.Container(
