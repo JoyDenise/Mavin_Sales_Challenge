@@ -8,6 +8,8 @@ from dash.dependencies import Input, Output
 
 import plotly.express as px
 
+from enviroment.settings import APP_HOST, APP_PORT, APP_DEBUG
+
 dbc_css = "https://cdn.jsdelivr.net/gh/AnnMarieW/dash-bootstrap-templates/dbc.min.css"
 
 sales = pd.read_pickle("Data/sales_pipeline_and_teams.pkl")
@@ -462,3 +464,7 @@ def qoq_revenue_update(manager):
     ).update_layout(showlegend=False)
 
     return fig
+
+
+if __name__ == "__main__":
+    app.run_server(debug=APP_DEBUG, host=APP_HOST, port=APP_PORT)
